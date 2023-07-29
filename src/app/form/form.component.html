@@ -1,0 +1,46 @@
+<div class="container">
+    <div [formGroup]="formGroup">
+        <div *ngFor="let question of questions.controls">
+            <label for="" class="form-label">{{question.label}}</label>
+            <div [ngSwitch]="question.type">
+                <div *ngSwitchCase="'text'">
+                    <input type="text" class="form-control" [name]="question.name" [id]="question.name" [value]="question.value">
+                </div>
+
+                <div *ngSwitchCase="'textarea'">
+                    <textarea [name]="question.name" class="form-control" [id]="question.name"></textarea>
+                </div>
+
+                <div *ngSwitchCase="'radio'">
+                    <ng-container *ngFor="let op of question.options">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" [name]="question.name" [id]="op.key" [value]="op.value">
+                            <label class="form-check-label" for="">{{op.value}}</label>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div *ngSwitchCase="'select'">
+                    <select [name]="question.name" [id]="question.name">
+                        <option *ngFor="let op of question.options"  [value]="op.key">{{op.value}}</option>
+                    </select>
+                </div>
+
+
+                <div *ngSwitchCase="'checkbox'">
+                    <div *ngIf="question.options">
+                        <ng-container *ngFor="let op of question.options">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" [name]="op.key" id="op.value">
+                                <label class="form-check-label" for="">
+                                {{op.value}}
+                          </label>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

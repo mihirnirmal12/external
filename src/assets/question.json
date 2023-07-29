@@ -1,0 +1,95 @@
+{
+    "controls": [{
+            "name": "firstName",
+            "label": "First name",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 10
+            }
+        },
+        {
+            "name": "lastName",
+            "label": "Last name",
+            "value": "",
+            "type": "text",
+            "validators": {}
+        },
+        {
+            "name": "comments",
+            "label": "Comments",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        },
+        {
+            "name": "agreeTerms",
+            "label": "Do you agree?",
+            "value": "false",
+            "type": "checkbox",
+            "validators": {}
+        },
+        {
+            "name": "lightDark",
+            "label": "Toggle dark mode",
+            "value": "false",
+            "type": "toggle",
+            "validators": {}
+        },
+        {
+            "name": "size",
+            "label": "Size",
+            "value": "",
+            "type": "range",
+            "rangeoptions": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "icon": "sunny"
+            },
+            "validators": {}
+        },
+        {
+            "name": "gender",
+            "label": "Gender",
+            "value": "",
+            "type": "radio",
+            "validators": {
+                "required": true
+            },
+            "options": [
+                { "key": "1", "value": "Male" },
+                { "key": "2", "value": "Female" }
+            ]
+        },
+        {
+            "name": "course",
+            "label": "Course",
+            "value": "",
+            "type": "checkbox",
+            "validators": {
+                "required": true
+            },
+            "options": [
+                { "key": "1", "value": "Java" },
+                { "key": "2", "value": "PHP" },
+                { "key": "3", "value": "C#" }
+            ]
+        },
+        {
+            "name": "degree",
+            "label": "Degree",
+            "value": "",
+            "type": "select",
+            "validators": {
+                "required": true
+            },
+            "options": [
+                { "key": "1", "value": "B.E." },
+                { "key": "2", "value": "BCA" },
+                { "key": "3", "value": "B.Tech." }
+            ]
+        }
+    ]
+}
